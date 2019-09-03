@@ -19,12 +19,12 @@ int gcd(int a, int b){
 // O(log min(a , b))
 // Iterative ---------------------------------------
 
-int gcd ( int a, int b ) {
-	while (b) {
-		a % = b ;
-		swap ( a, b ) ;
-	}
-	return a ;
+int gcd ( int a, int b ){
+    while (b){
+        a % = b ;
+        swap ( a, b ) ;
+    }
+    return a ;
 } 
 
 int main(int argc, char const *argv[])
