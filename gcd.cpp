@@ -1,24 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// O(log min(a , b))
-//recursive ----------------------------------------
-
-int gcdr(int a, int b){
-    if(b == 0)return a;
-    else return gcdr(b , a%b);
-}
-
-// O(log min(a , b))
-//using ternary operators --------------------------
-
+// O(log min(a , b)) using ternary operators
 int gcd(int a, int b){
     return b ? gcd ( b, a % b ) : a ;
 }
 
 // O(log min(a , b))
 // Iterative ---------------------------------------
-
 int gcdi( int a, int b ){
     while (b){
         a %= b ;
@@ -27,8 +16,13 @@ int gcdi( int a, int b ){
     return a ;
 } 
 
-// O( sqrt(min(a,b)) )
+// O(log min(a , b)) , recursive 
+int gcdr(int a, int b){
+    if(b == 0)return a;
+    else return gcdr(b , a%b);
+}
 
+// O( sqrt(min(a,b)) )
 int gcdsq(int a ,int b){
     if(a<b)swap(a , b);
     if(b==0)return a;
