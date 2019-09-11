@@ -36,10 +36,6 @@ int gcdsq(int a ,int b){
     return ans;
 }
 
-int lcm(int a , int b){
-    return a*b/gcd(a,b);
-}
-
 int main(int argc, char const *argv[])
 {
     ios::sync_with_stdio(0);cin.tie(0);
